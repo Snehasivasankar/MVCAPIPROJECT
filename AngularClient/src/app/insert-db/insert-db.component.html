@@ -1,0 +1,50 @@
+<div class="page-container">
+  <div class="form-card">
+    <h2>🎓 Student Details</h2>
+
+    <form (ngSubmit)="addstudentdata()" #studentForm="ngForm">
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="userData.Name"
+          name="Name"
+          required
+          placeholder="Enter your name"
+        />
+        <small *ngIf="studentForm.submitted && !userData.Name" class="error">* Name required</small>
+      </div>
+
+      <div class="input-group">
+        <label for="age">Age</label>
+        <input
+          type="number"
+          id="age"
+          [(ngModel)]="userData.Age"
+          name="Age"
+          min="18"
+          max="80"
+          required
+          placeholder="Enter your age"
+        />
+        <small *ngIf="studentForm.submitted && !userData.Age" class="error">* Age required</small>
+      </div>
+
+      <div class="input-group">
+        <label for="mark">Mark</label>
+        <input
+          type="number"
+          id="mark"
+          [(ngModel)]="userData.mark"
+          name="mark"
+          required
+          placeholder="Enter marks"
+        />
+        <small *ngIf="studentForm.submitted && !userData.mark" class="error">* Mark required</small>
+      </div>
+
+      <button type="submit" class="save-btn">💾 Save Student</button>
+    </form>
+  </div>
+</div>

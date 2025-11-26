@@ -1,0 +1,28 @@
+<div class="details-container" *ngIf="student">
+
+  <div class="details-card">
+    <h2>Student Details</h2>
+
+    <h3>{{ student.Name | uppercase }}</h3>
+
+    <div class="details-row">
+      <span class="label">Age:</span>
+      <span class="value">{{ student.Age }}</span>
+    </div>
+
+    <div class="details-row">
+      <span class="label">Mark:</span>
+      <span class="value">{{ student.mark }}</span>
+    </div>
+
+    <div class="btn-group">
+      <button class="edit-btn" [routerLink]="['/editdetails', student.Id]">Edit</button>
+      <button class="home-btn" routerLink="/AllDetails">Back</button>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #noData>
+  <p class="no-data">No Student Found</p>
+</ng-template>

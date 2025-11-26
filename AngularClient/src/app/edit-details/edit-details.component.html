@@ -1,0 +1,31 @@
+<h1>Edit Details</h1>
+
+<div class="edit-container">
+
+  <div class="edit-card">
+
+    <h2>✏️ Edit Student</h2>
+
+    <div class="input-group">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="studentData.Name" placeholder="Enter name">
+    </div>
+
+    <div class="input-group">
+      <label>Age</label>
+      <input type="number" [(ngModel)]="studentData.Age" placeholder="Enter age">
+    </div>
+
+    <div class="input-group">
+      <label>Mark</label>
+      <input type="number" [(ngModel)]="studentData.mark" placeholder="Enter mark">
+    </div>
+
+    <div class="btn-group">
+      <button class="update-btn" (click)="updateProduct()">Update</button>
+      <button class="home-btn" routerLink="/AllDetails">Go Home</button>
+    </div>
+
+  </div>
+
+</div>

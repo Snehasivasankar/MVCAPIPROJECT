@@ -1,0 +1,47 @@
+<div class="page-container">
+
+  <div class="table-card">
+
+    <h2>📋 All Student Details</h2>
+
+    <button class="add-btn" routerLink="/insertdb">+ Add New Student</button>
+
+    <div *ngIf="Getdata && Getdata.length > 0; else noData">
+      <table class="styled-table">
+
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Mark</th>
+            <th colspan="3" class="action-col">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let p of Getdata">
+            <td>{{ p.Name }}</td>
+            <td>{{ p.Age }}</td>
+            <td>{{ p.mark }}</td>
+
+            <td>
+              <button class="btn-details" routerLink="/selectdetails/{{p.Id}}">Details</button>
+            </td>
+            <td>
+              <button class="btn-edit" routerLink="/editdetails/{{p.Id}}">Edit</button>
+            </td>
+            <td>
+              <button class="btn-delete" (click)="delete(p.Id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    <ng-template #noData>
+      <p class="no-data">No data found</p>
+    </ng-template>
+
+  </div>
+</div>

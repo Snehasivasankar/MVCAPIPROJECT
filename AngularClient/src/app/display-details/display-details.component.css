@@ -1,0 +1,109 @@
+.details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #89c4f4, #6a89cc);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+/* Card Box */
+.details-card {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  width: 380px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings */
+.details-card h2 {
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.details-card h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+/* Row Style */
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+/* Labels */
+.label {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Values */
+.value {
+  color: #000;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+/* Edit Button */
+.edit-btn {
+  background: #6a5acd;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background: #5548c8;
+}
+
+/* Home Button */
+.home-btn {
+  background: #26a69a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background: #1f8d82;
+}
+
+/* No data text */
+.no-data {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
